@@ -86,3 +86,7 @@ p.idea/.idea.bounceinsights.dir/.idea/sonarlint/securityhotspotstore/0/0/0007709
 p.idea/.idea.bounceinsights.dir/.idea/sonarlint/securityhotspotstore/3/5/35a7206374b5cdc337435e4c4080d04336b508d6,7\a\7abc363ebeb84fce618016b6600b354cfcf697be
  
 p.idea/.idea.bounceinsights.dir/.idea/sonarlint/securityhotspotstore/0/a/0aa7b545b24b19b985e6898d21711830e0c4a2f0,9\f\9fb391ca302b85854e1949e16f31d779a578624b
+K
+backend/routes/countries.js,0\4\04860e3ad915b8ef6ba0b7a3cdbe1e37fd83c1c2
+<
+backend/.env,f\3\f30451335edfb80e231f658d0defc83bb7e4c3a7
