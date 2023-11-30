@@ -1,17 +1,21 @@
+// Import necessary modules and styles
 import React, {useState} from 'react';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
+// Define CountryCard component
 function CountryCard({countryData}) {
+    // If no country data is provided, don't render anything
     if (!countryData) return null;
 
-    // Extract currency information
+    // Extract currency information from country data
     const currencyInfo = countryData.currencies ? Object.entries(countryData.currencies).map(([code, {
         name,
         symbol
     }]) => `${name} (${symbol})`).join(', ') : 'No currency information';
 
+    // Render country information
     return (
         <div className="country-card">
             <h3>{countryData.name.common}</h3>
@@ -24,12 +28,16 @@ function CountryCard({countryData}) {
     );
 }
 
+
+// Define App component
 function App() {
+    // Define state variables
     const [country, setCountry] = useState('');
     const [error, setError] = useState('');
     const [isLoading, setIsLoading] = useState(false);
     const [countryData, setCountryData] = useState(null);
 
+    // Define Submit function
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (!country.trim()) {
@@ -68,4 +76,5 @@ function App() {
     );
 }
 
+// Export App component
 export default App;

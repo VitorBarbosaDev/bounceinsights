@@ -1,15 +1,27 @@
-﻿require('dotenv').config();
+﻿// Load environment variables from .env file
+require('dotenv').config();
+
+// Import necessary modules
 const express = require('express');
 const cors = require('cors');
-const countriesRoutes = require('./routes/countries'); // Import the new route
 
+// Import the countries route
+const countriesRoutes = require('./routes/countries');
+
+// Initialize express app
 const app = express();
-const port = process.env.PORT || 5000; // Use environment variable for port
 
+// Use the port from environment variables or default to 5000
+const port = process.env.PORT || 5000;
+
+// Use cors and json middleware
 app.use(cors());
 app.use(express.json());
-app.use('/api/countries', countriesRoutes); // Use the imported routes
 
+// Use the countries route for /api/countries path
+app.use('/api/countries', countriesRoutes);
+
+// Start the server
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);
 });
