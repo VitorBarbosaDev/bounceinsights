@@ -39,7 +39,7 @@ function App() {
 
     // Define Submit function
     const handleSubmit = async (e) => {
-        e.preventDefault();
+        e.preventDefault(); // Prevent form from being submitted in the default way
         if (!country.trim()) {
             setError('Please enter a country name.');
             return;
@@ -59,7 +59,7 @@ function App() {
 
     return (
         <div className="app-container">
-            <div className="search-bar">
+            <form onSubmit={handleSubmit} className="search-bar"> 
                 <input
                     type="text"
                     className="search-input"
@@ -67,8 +67,8 @@ function App() {
                     onChange={(e) => setCountry(e.target.value)}
                     placeholder="Search for a country..."
                 />
-                <button onClick={handleSubmit} className="search-button">Search</button>
-            </div>
+                <button type="submit" className="search-button">Search</button>
+            </form>
             {isLoading && <p>Loading...</p>}
             {error && <p style={{color: 'red'}}>{error}</p>}
             {countryData && <CountryCard countryData={countryData}/>}

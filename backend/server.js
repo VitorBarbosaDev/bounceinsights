@@ -30,7 +30,12 @@ app.get('*', function (request, response) {
     response.sendFile(path.join(__dirname, '..', 'bouncrinsightsapp', 'build', 'index.html'));
 });
 
-// Start the server
-app.listen(port, () => {
-    console.log(`Server running on port ${port}`);
-});
+// Start the server only when this module is not required by another module
+if (require.main === module) {
+    app.listen(port, () => {
+        console.log(`Server running on port ${port}`);
+    });
+}
+
+// Export the express app
+module.exports = app;
