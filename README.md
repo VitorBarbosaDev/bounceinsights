@@ -24,7 +24,8 @@ development, providing a seamless experience for users to access global country 
 
 ## Screenshots
 
-*Include a few screenshots of your application here.*
+![image](https://github.com/VitorBarbosaDev/bounceinsights/assets/46977318/1d8d133e-1efa-40ef-b84a-5f588d307b20)
+
 
 ## Installation
 
