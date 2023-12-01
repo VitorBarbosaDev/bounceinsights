@@ -69,13 +69,9 @@ The application can be configured with the following environment variables:
 
 ## Deployment
 
-*https://find-countries-info-a57788798e99.herokuapp.com/*
+Live Site Deployment : *https://find-countries-info-a57788798e99.herokuapp.com/*
+Github Repository : *https://github.com/VitorBarbosaDev/bounceinsights*
 
-
-
-## Acknowledgments
-
-*Credits to any third-party assets used or shoutouts to contributors.*
 
 ## Future Enhancements
 
